@@ -36,10 +36,18 @@
         source = ../../dotfiles/nvim;
         recursive = true;
       };
+
+      ".config/lf/" = {
+        source = ../../dotfiles/lf;
+        recursive = true;
+      };
     };
 
     sessionVariables = {
       EDITOR = "nvim";
+    };
+    shellAliases = {
+      lf = "~/dotfiles/lf/lfub";
     };
   };
 
