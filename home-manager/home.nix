@@ -27,10 +27,6 @@
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
     # plain files is through 'home.file'.
     file = {
-      # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-      # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-      # # symlink to the Nix store copy.
-      # ".screenrc".source = dotfiles/screenrc;
 
       ".config/nvim/" = {
         source = ../../dotfiles/nvim;
@@ -46,8 +42,12 @@
     sessionVariables = {
       EDITOR = "nvim";
     };
+    sessionPath = [
+      "./cargo/bin/"
+    ];
     shellAliases = {
       lf = "~/dotfiles/lf/lfub";
+      nv = "nvim";
     };
   };
 
@@ -69,6 +69,13 @@
     thefuck.enable = true;
     z-lua.enable = true;
     zellij.enable = true;
+
+    zsh = {
+      enable = true;
+      envExtra = ''
+        eval $(thefuck --alias)
+      '';
+    };
   };
 
 }
