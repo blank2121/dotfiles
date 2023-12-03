@@ -6,10 +6,12 @@
     homeDirectory = "/Users/winstonwalter";
 
     stateVersion = "23.11";
+
     packages = with pkgs; [
       cargo
       fzf
       gh
+      gitui
       lf
       neovim
       nodejs_20
@@ -17,6 +19,7 @@
       pyenv
       ripgrep
       thefuck
+      ueberzugpp
       z-lua
       zellij
     ];
@@ -47,8 +50,10 @@
       enable = true;
       defaultEditor = true;
     };
+
     fzf.enable = true;
     gh.enable = true;
+    gitui.enable = true;
     lf.enable = true;
     pyenv.enable = true;
     pyenv.enableZshIntegration = true;
