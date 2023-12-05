@@ -69,12 +69,12 @@
       enable = true;
       envExtra = ''
         eval $(thefuck --alias)
+        eval "$(starship init zsh)"
         alias nv="nvim"
         alias lf="~/.config/lf/lfub"
         alias zj="zellij"
         alias rm="trash-put"
         export PATH="$HOME/.cargo/bin:$PATH"
-
       '';
     };
   };
