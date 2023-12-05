@@ -8,72 +8,73 @@
     stateVersion = "23.11";
 
     packages = with pkgs; [
+      bacon
+      bat
+      bottom
       cargo
+      eza
       fzf
       gh
       gitui
+      gnupg
       lf
+      mprocs
       neovim
+      nmap
       nodejs_20
       pass
       pyenv
       ripgrep
+      starship
       thefuck
+      trash-cli
       ueberzugpp
-      z-lua
+      which
       zellij
+      zsh
     ];
-
-    # Home Manager is pretty good at managing dotfiles. The primary way to manage
-    # plain files is through 'home.file'.
-    file = {
-
-      ".config/nvim/" = {
-        source = ../../dotfiles/nvim;
-        recursive = true;
-      };
-
-      ".config/lf/" = {
-        source = ../../dotfiles/lf;
-        recursive = true;
-      };
-    };
 
     sessionVariables = {
       EDITOR = "nvim";
-    };
-    sessionPath = [
-      "./cargo/bin/"
-    ];
-    shellAliases = {
-      lf = "~/dotfiles/lf/lfub";
-      nv = "nvim";
     };
   };
 
   programs = {
     home-manager.enable = true;
 
+    bottom.enable = true;
+    fzf.enable = true;
+    fzf.enableZshIntegration = true;
+    gh.enable = true;
+    gitui.enable = true;
+    lf.enable = true;
     neovim = {
       enable = true;
       defaultEditor = true;
     };
-
-    fzf.enable = true;
-    gh.enable = true;
-    gitui.enable = true;
-    lf.enable = true;
+    password-store.enable = true;
     pyenv.enable = true;
     pyenv.enableZshIntegration = true;
     ripgrep.enable = true;
+    starship = {
+      enable = true;
+      enableZshIntegration = true;
+    };
     thefuck.enable = true;
-    z-lua.enable = true;
+    thefuck.enableZshIntegration = true;
+    thefuck.enableInstantMode = true;
     zellij.enable = true;
-
+    zellij.enableZshIntegration = true;
     zsh = {
       enable = true;
       envExtra = ''
         eval $(thefuck --alias)
+        alias nv="nvim"
+        alias lf="~/.config/lf/lfub"
+        alias zj="zellij"
+        alias rm="trash-put"
+        export PATH="$HOME/.cargo/bin:$PATH"
+
       '';
     };
   };
