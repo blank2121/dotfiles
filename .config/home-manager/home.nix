@@ -2,8 +2,8 @@
 
 {
   home = {
-    username = "winstonwalter";
-    homeDirectory = "/Users/winstonwalter";
+    username = "winston";
+    homeDirectory = "/home/winston";
 
     stateVersion = "23.11";
 
@@ -14,12 +14,13 @@
       cargo
       eza
       fzf
+      gcc
       gh
       gitui
       gnupg
       lf
       mprocs
-      neovim
+      #neovim
       nmap
       nodejs_20
       pass
@@ -32,6 +33,7 @@
       which
       zellij
       zsh
+      fd
     ];
 
     sessionVariables = {
@@ -48,10 +50,10 @@
     gh.enable = true;
     gitui.enable = true;
     lf.enable = true;
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-    };
+    #neovim = {
+    #  enable = true;
+    #  defaultEditor = true;
+    #};
     password-store.enable = true;
     pyenv.enable = true;
     pyenv.enableZshIntegration = true;
@@ -67,6 +69,8 @@
     zellij.enableZshIntegration = true;
     zsh = {
       enable = true;
+      enableAutosuggestions = true;
+      enableCompletion = true;
       envExtra = ''
         eval $(thefuck --alias)
         eval "$(starship init zsh)"
