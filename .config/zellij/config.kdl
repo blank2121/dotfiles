@@ -32,7 +32,7 @@ keybinds {
         bind "r" { NewPane "Right"; }
         bind "x" { CloseFocus; }
         bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
-        bind "z" { TogglePaneFrames; }
+        bind "z" { TogglePaneFrames; SwitchToMode "Normal"; }
         bind "w" { ToggleFloatingPanes; }
         bind "e" { TogglePaneEmbedOrFloating; }
         bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
@@ -251,7 +251,7 @@ plugins {
 // Define color themes for Zellij
 // For more examples, see: https://github.com/zellij-org/zellij/tree/main/example/themes
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
-//
+
 themes {
     dracula {
         fg 248 248 242
@@ -270,12 +270,12 @@ themes {
 
 // Choose the theme that is specified in the themes section.
 // Default: default
-//
+
 theme "dracula"
 
 // The name of the default layout to load on startup
 // Default: "default"
-//
+
 default_layout "compact"
 
 // Choose the mode that zellij uses when starting up.
