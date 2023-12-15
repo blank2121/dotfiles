@@ -8,11 +8,13 @@
     stateVersion = "23.11";
 
     packages = with pkgs; [
+      #neovim
       bacon
       bat
       bottom
       cargo
       eza
+      fd
       fzf
       gcc
       gh
@@ -20,20 +22,22 @@
       gnupg
       lf
       mprocs
-      #neovim
+      neofetch
+      neofetch
       nmap
       nodejs_20
       pass
       pyenv
+      python311Packages.pip
       ripgrep
       starship
       thefuck
+      timeshift
       trash-cli
       ueberzugpp
       which
       zellij
       zsh
-      fd
     ];
 
     sessionVariables = {
@@ -42,8 +46,7 @@
   };
 
   programs = {
-    home-manager.enable = true;
-
+    home-manager.enable = true; 
     bottom.enable = true;
     fzf.enable = true;
     fzf.enableZshIntegration = true;
@@ -71,6 +74,7 @@
       enable = true;
       enableAutosuggestions = true;
       enableCompletion = true;
+      syntaxHighlighting.enable = true;
       envExtra = ''
         eval $(thefuck --alias)
         eval "$(starship init zsh)"
@@ -78,9 +82,10 @@
         alias lf="~/.config/lf/lfub"
         alias zj="zellij"
         alias rm="trash-put"
+        alias times="sudo -E timeshift-gtk"
+        alias wallpaper="swww img --transition-type=any"
         export PATH="$HOME/.cargo/bin:$PATH"
       '';
     };
   };
-
 }

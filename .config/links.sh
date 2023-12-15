@@ -25,7 +25,26 @@ mkdir ~/.config/hypr/
 ln -s ~/dotfiles/.config/hypr/* ~/.config/hypr/
 
 # zellij
+rm -rf ~/.config/zellij/
+mkdir ~/.config/zellij/
+ln -s ~/dotfiles/.config/zellij/* ~/.config/zellij/
 
 # lf
+rm -rf ~/.config/lf/
+mkdir ~/.config/lf/
+ln -s ~/dotfiles/.config/lf/** ~/.config/lf/
 
 # nvim
+rm -rf ~/.config/nvim/
+mkdir ~/.config/nvim/
+ln -s ~/dotfiles/.config/nvim/** ~/.config/nvim/
+
+# rofi
+rm -rf ~/.config/rofi/
+mkdir ~/.config/rofi/
+ln -s ~/dotfiles/.config/rofi/** ~/.config/rofi/
+
+# neofetch
+rm -rf ~/.config/neofetch/
+mkdir ~/.config/neofetch/
+ln -s ~/dotfiles/.config/neofetch/** ~/.config/neofetch/
