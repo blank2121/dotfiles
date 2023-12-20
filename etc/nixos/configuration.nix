@@ -124,6 +124,9 @@
     wl-clipboard
     wlogout
     zsh
+
+    # only want on nix but not needed for system
+    termusic
   ];
 
   services.flatpak.enable = true;

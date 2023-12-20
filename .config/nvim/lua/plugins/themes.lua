@@ -4,4 +4,7 @@ return {
             "tjdevries/colorbuddy.nvim"
         },
     },
+    { "Shadorain/shadotheme"},
+    { "fcpg/vim-farout" },
+    { "KabbAmine/yowish.vim" },
 }

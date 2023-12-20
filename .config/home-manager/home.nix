@@ -12,7 +12,6 @@
       bacon
       bat
       bottom
-      cargo
       eza
       fd
       fzf
@@ -21,15 +20,18 @@
       gitui
       gnupg
       lf
+      mark
       mprocs
       neofetch
       neofetch
       nmap
       nodejs_20
+      pango
       pass
       pyenv
       python311Packages.pip
       ripgrep
+      rustup
       starship
       thefuck
       timeshift
@@ -76,7 +78,7 @@
       enableCompletion = true;
       syntaxHighlighting.enable = true;
       envExtra = ''
-        eval $(thefuck --alias)
+        eval $(thefuck --alias --enable-experimental-instant-mode)
         eval "$(starship init zsh)"
         alias nv="nvim"
         alias lf="~/.config/lf/lfub"
@@ -85,6 +87,7 @@
         alias times="sudo -E timeshift-gtk"
         alias wallpaper="swww img --transition-type=any"
         export PATH="$HOME/.cargo/bin:$PATH"
+        export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
       '';
     };
   };
