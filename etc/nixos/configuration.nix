@@ -79,7 +79,7 @@
       Option "PreferredMode" "2560x1600"
     '';
     displayManager.sddm = {
-      enable = true;
+      enable = false;
       wayland.enable = true;
       enableHidpi = true;
     };
@@ -114,6 +114,7 @@
     git
     gnumake
     kitty
+    openssl_3
     rofi-wayland
     swww
     vim
@@ -126,7 +127,7 @@
     zsh
 
     # only want on nix but not needed for system
-    termusic
+    cmus
   ];
 
   services.flatpak.enable = true;

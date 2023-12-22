@@ -39,6 +39,7 @@
       ueberzugpp
       which
       zellij
+      zoxide
       zsh
     ];
 
@@ -88,6 +89,7 @@
         alias wallpaper="swww img --transition-type=any"
         export PATH="$HOME/.cargo/bin:$PATH"
         export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+        eval "$(zoxide init zsh)"
       '';
     };
   };
