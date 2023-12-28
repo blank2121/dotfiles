@@ -48,3 +48,8 @@ ln -s ~/dotfiles/.config/rofi/** ~/.config/rofi/
 rm -rf ~/.config/neofetch/
 mkdir ~/.config/neofetch/
 ln -s ~/dotfiles/.config/neofetch/** ~/.config/neofetch/
+
+# dunst
+rm -rf ~/.config/dunst/
+mkdir ~/.config/dunst/
+ln -s ~/dotfiles/.config/dunst/** ~/.config/dunst/

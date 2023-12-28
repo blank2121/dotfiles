@@ -109,6 +109,7 @@
   environment.systemPackages = with pkgs; [
     bash
     brightnessctl
+    dunst
     firefox
     flatpak
     git
@@ -128,6 +129,7 @@
 
     # only want on nix but not needed for system
     cmus
+    mpv
   ];
 
   services.flatpak.enable = true;

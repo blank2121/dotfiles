@@ -1,7 +1,8 @@
 com.github.KRTirtho.Spotube
 com.github.tchx84.Flatseal
 dev.vencord.Vesktop
-io.mpv.Mpv
+fm.reaper.Reaper
+info.febvre.Komikku
 md.obsidian.Obsidian
 org.godotengine.Godot
 org.kde.dolphin

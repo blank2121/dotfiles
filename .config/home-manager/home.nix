@@ -12,6 +12,7 @@
       bacon
       bat
       bottom
+      cron
       eza
       fd
       fzf
@@ -26,10 +27,11 @@
       neofetch
       nmap
       nodejs_20
+      openjdk
       pango
+      poetry
       pass
-      pyenv
-      python311Packages.pip
+      python312Full
       ripgrep
       rustup
       starship
@@ -49,7 +51,7 @@
   };
 
   programs = {
-    home-manager.enable = true; 
+    home-manager.enable = true;
     bottom.enable = true;
     fzf.enable = true;
     fzf.enableZshIntegration = true;
@@ -79,17 +81,21 @@
       enableCompletion = true;
       syntaxHighlighting.enable = true;
       envExtra = ''
-        eval $(thefuck --alias --enable-experimental-instant-mode)
         eval "$(starship init zsh)"
-        alias nv="nvim"
+        eval "$(zoxide init zsh)"
+        eval $(thefuck --alias --enable-experimental-instant-mode)
+        alias homes="home-manager switch"
         alias lf="~/.config/lf/lfub"
-        alias zj="zellij"
+        alias lobster="~/Projects/lobster/lobster.sh"
+        alias mpv="flatpak run io.mpv.Mpv"
+        alias notify-send="dunstify"
+        alias nv="nvim"
         alias rm="trash-put"
         alias times="sudo -E timeshift-gtk"
         alias wallpaper="swww img --transition-type=any"
+        alias zj="zellij"
         export PATH="$HOME/.cargo/bin:$PATH"
         export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
-        eval "$(zoxide init zsh)"
       '';
     };
   };
