@@ -1,6 +1,13 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./sh.nix
+    ./general-pkgs.nix
+    ./linux-specific.nix
+    ./wm/wayland/wayland.nix
+    ./apps/default.nix
+  ];
   home = {
     username = "winston";
     homeDirectory = "/home/winston";
@@ -8,41 +15,21 @@
     stateVersion = "23.11";
 
     packages = with pkgs; [
-      #neovim
       bacon
       bat
       bottom
-      cron
-      eza
-      fd
       fzf
-      gcc
       gh
       gitui
-      gnupg
       lf
-      mark
-      mprocs
-      neofetch
-      neofetch
-      nmap
-      nodejs_20
-      openjdk
-      pango
-      poetry
       pass
-      python312Full
+      pyenv
       ripgrep
-      rustup
       starship
       thefuck
-      timeshift
-      trash-cli
-      ueberzugpp
-      which
       zellij
       zoxide
-      zsh
+      eza
     ];
 
     sessionVariables = {
@@ -51,52 +38,65 @@
   };
 
   programs = {
-    home-manager.enable = true;
+    bacon.enable = true;
+    bacon.settings = { };
+    bat.enable = true;
     bottom.enable = true;
-    fzf.enable = true;
-    fzf.enableZshIntegration = true;
+
+    eza = {
+      enable = true;
+      enableAliases = true;
+      icons = true;
+    };
+
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
     gh.enable = true;
     gitui.enable = true;
-    lf.enable = true;
-    #neovim = {
-    #  enable = true;
-    #  defaultEditor = true;
-    #};
+    home-manager.enable = true;
+
+    lf = {
+      enable = true;
+      extraConfig = builtins.readFile ~/dotfiles/.config/lf/lfrc;
+    };
+
     password-store.enable = true;
-    pyenv.enable = true;
-    pyenv.enableZshIntegration = true;
+
+    pyenv = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
     ripgrep.enable = true;
     starship = {
       enable = true;
       enableZshIntegration = true;
     };
-    thefuck.enable = true;
-    thefuck.enableZshIntegration = true;
-    thefuck.enableInstantMode = true;
-    zellij.enable = true;
-    zellij.enableZshIntegration = true;
-    zsh = {
+
+    thefuck = {
       enable = true;
-      enableAutosuggestions = true;
-      enableCompletion = true;
-      syntaxHighlighting.enable = true;
-      envExtra = ''
-        eval "$(starship init zsh)"
-        eval "$(zoxide init zsh)"
-        eval $(thefuck --alias --enable-experimental-instant-mode)
-        alias homes="home-manager switch"
-        alias lf="~/.config/lf/lfub"
-        alias lobster="~/Projects/lobster/lobster.sh"
-        alias mpv="flatpak run io.mpv.Mpv"
-        alias notify-send="dunstify"
-        alias nv="nvim"
-        alias rm="trash-put"
-        alias times="sudo -E timeshift-gtk"
-        alias wallpaper="swww img --transition-type=any"
-        alias zj="zellij"
-        export PATH="$HOME/.cargo/bin:$PATH"
-        export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
-      '';
+      enableInstantMode = true;
+      enableZshIntegration = true;
     };
+
+    zellij = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+  };
+
+  # home.file conf
+  home.file."starship.toml" = {
+    enable = true;
+    source = ~/dotfiles/.config/starship.toml;
+    target = ".config/starship.toml";
   };
 }
