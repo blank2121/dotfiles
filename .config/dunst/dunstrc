@@ -68,7 +68,7 @@
     foreground = "#CDD6F4"
     highlight = "#CDD6F4"
     timeout = 10
-    new_icon = ~/.local/share/icons/winston/bell.svg
+    new_icon = ~/dotfiles/.local/share/icons/winston/bell.svg
 
 [urgency_critical]
     background = "#F38BA8"

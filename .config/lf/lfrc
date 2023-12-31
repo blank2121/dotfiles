@@ -1,5 +1,5 @@
-set previewer ~/.config/lf/preview
-set cleaner ~/.config/lf/cleaner
+set previewer ~/dotfiles/.config/lf/preview
+set cleaner ~/dotfiles/.config/lf/cleaner
 
 # Basic Settings
 set hidden true
