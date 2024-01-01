@@ -7,6 +7,7 @@
     cmus
     dunst
     firefox
+    flameshot
     flatpak
     gnumake
     kitty

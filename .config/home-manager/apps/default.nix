@@ -6,5 +6,6 @@
     ./nvim.nix
     ./rofi.nix
     ./zellij.nix
+    ./home-manager.nix
   ];
 }
