@@ -7,7 +7,9 @@
     fd
     gcc
     git
+    glow
     gnupg
+    gum
     mark
     mprocs
     neofetch

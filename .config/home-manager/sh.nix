@@ -11,7 +11,6 @@ let
     mpv = "flatpak run io.mpv.Mpv";
     lobster = "~/dotfiles/scripts/lobster.sh";
     lf = "~/dotfiles/.config/lf/lfub";
-    homes = "rm -rf ~/.config/home-manager/ && cp -r ~/dotfiles/.config/home-manager/ ~/.config/ && home-manager switch";
   };
   extra = ''
     export PATH="$HOME/.cargo/bin:$PATH"

@@ -7,10 +7,11 @@
 
   home.packages = with pkgs; [
     rofi-wayland
+    swww
     waybar
     wineWowPackages.waylandFull
-    wlogout
     wl-clipboard
+    wlogout
   ];
 
   home.file."hypr" = {
