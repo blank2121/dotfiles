@@ -32,7 +32,7 @@
     "custom/wallchange": {
         "format": "󰋰 {}",
         "exec": "echo ; echo 󰋰 random wallpaper",
-        "on-click": "exec ~/wallpaper/random.sh",
+        "on-click": "exec ~/Photos/wallpaper/random.sh",
         "interval": 86400,
         "tooltip": true,
     },

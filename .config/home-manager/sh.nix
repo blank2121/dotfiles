@@ -2,22 +2,23 @@
 
 let
   alias = {
-    zj = "zellij";
-    wallpaper = "swww img --transition-type=any";
-    times = "sudo -E timeshift-gtk";
-    rm = "trash-put";
+    bt = "bluetoothctl";
+    lf = "~/dotfiles/.config/lf/lfub";
+    lobster = "~/dotfiles/scripts/lobster.sh";
+    mpv = "flatpak run io.mpv.Mpv";
     notify-send = "dunstify";
     nv = "nvim";
-    mpv = "flatpak run io.mpv.Mpv";
-    lobster = "~/dotfiles/scripts/lobster.sh";
-    lf = "~/dotfiles/.config/lf/lfub";
+    rm = "trash-put";
+    times = "sudo -E timeshift-gtk";
+    wallpaper = "swww img --transition-type=any";
+    zj = "zellij";
   };
   extra = ''
     export PATH="$HOME/.cargo/bin:$PATH"
     export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
     eval "$(starship init zsh)"
     eval "$(zoxide init zsh)"
-    eval $(thefuck --alias --enable-experimental-instant-mode)
+    eval $(thefuck --alias)
   '';
 in
 {

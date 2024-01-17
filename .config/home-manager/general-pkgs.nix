@@ -6,10 +6,12 @@
     cron
     fd
     gcc
+    ghc
     git
     glow
     gnupg
     gum
+    haskellPackages.cabal-install
     mark
     mprocs
     neofetch

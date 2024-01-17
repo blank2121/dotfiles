@@ -78,19 +78,20 @@
     format = "<b>%s</b>\n%b"
     new_icon = ~/.local/share/icons/winston/warning.svg
 
-[urgency_lowbat]
-    background = "#F38BA8"
-    foreground = "#181825"
-    frame_color = "#F38BA8"
-    timeout = 5
-    format = "<b>%s</b>\n%b"
-    new_icon = ~/.local/share/icons/winston/battery_low.svg
+#[urgency_lowbat]
+#    background = "#F38BA8"
+#    foreground = "#181825"
+#    frame_color = "#F38BA8"
+#    timeout = 5
+#    format = "<b>%s</b>\n%b"
+#    new_icon = ~/.local/share/icons/winston/battery_low.svg
+#
+#[urgency_fullbat]
+#    background = "#5BC236"
+#    foreground = "#181825"
+#    frame_color = "#5BC236"
+#    timeout = 5
+#    format = "<b>%s</b>\n%b"
+#    new_icon = ~/.local/share/icons/winston/battery_full.svg
 
-[urgency_fullbat]
-    background = "#5BC236"
-    foreground = "#181825"
-    frame_color = "#5BC236"
-    timeout = 5
-    format = "<b>%s</b>\n%b"
-    new_icon = ~/.local/share/icons/winston/battery_full.svg
 # vim: ft=cfg

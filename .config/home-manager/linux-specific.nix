@@ -4,16 +4,17 @@
   home.packages = with pkgs; [
     #neovim
     brightnessctl
+    btrfs-progs
     cmus
     dunst
     firefox
-    flameshot
     flatpak
     gnumake
     kitty
     mpv
     openssl_3
     timeshift
+    protonvpn-gui
   ];
 
   # apps

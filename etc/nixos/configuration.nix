@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -33,7 +34,7 @@
       jack.enable = true;
     };
   };
-  
+
   # bluetooth setup
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
@@ -99,37 +100,16 @@
     isNormalUser = true;
     description = "winston";
     extraGroups = [ "networkmanager" "wheel" "audio" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
- 
+
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
     bash
-    brightnessctl
-    dunst
-    firefox
-    flatpak
-    git
-    gnumake
-    kitty
-    openssl_3
-    rofi-wayland
-    swww
-    vim
-    waybar
-    wget
-    wineWowPackages.waylandFull
-    winetricks
-    wl-clipboard
-    wlogout
-    zsh
-
-    # only want on nix but not needed for system
-    cmus
-    mpv
+    spotify
   ];
 
   services.flatpak.enable = true;
@@ -142,7 +122,7 @@
     nssmdns = true;
     openFirewall = true;
   };
-  
+
 
   fonts = {
     enableDefaultPackages = true;
@@ -159,8 +139,8 @@
         monospace = [ "JetBrainsMono Nerd Font" ];
         emoji = [ "Fira Code Symbol" ];
       };
-    }; 
-    packages = with pkgs; [ 
+    };
+    packages = with pkgs; [
       ubuntu_font_family
       # Persian Font
       vazir-fonts
@@ -174,7 +154,7 @@
       dina-font
       proggyfonts
     ];
-  
+
   };
 
 
