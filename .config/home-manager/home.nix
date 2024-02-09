@@ -33,7 +33,7 @@
     ];
 
     sessionVariables = {
-      EDITOR = "nvim";
+      EDITOR = "nix run ~/nixvim# --";
     };
   };
 

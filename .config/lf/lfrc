@@ -53,11 +53,15 @@ cmd restore_trash ${{
   trash-restore
 }}
 
+cmd nixvim ${{
+	nix run ~/nixvim# --
+}}
+
 # Bindings
 map d
 map m
 
-map c $nvim "$f"
+map c nixvim "$f"
 
 map au unarchive
 map ae $wine "$f"

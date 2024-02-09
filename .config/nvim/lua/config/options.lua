@@ -42,5 +42,5 @@ opt.splitbelow = true
 opt.iskeyword:append("-")
 
 -- add PATH
-vim.env.PATH = vim.env.PATH .. ":/home/winston/.local/share/nvim/mason/bin/"
+-- vim.env.PATH = vim.env.PATH .. ":/home/winston/.local/share/nvim/mason/bin/"
 

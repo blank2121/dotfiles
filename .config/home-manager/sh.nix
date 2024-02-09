@@ -7,13 +7,15 @@ let
     lobster = "~/dotfiles/scripts/lobster.sh";
     mpv = "flatpak run io.mpv.Mpv";
     notify-send = "dunstify";
-    nv = "nvim";
+    nvm = "nvim";
+    nv = "nix run ~/nixvim# --";
     rm = "trash-put";
     times = "sudo -E timeshift-gtk";
     wallpaper = "swww img --transition-type=any";
     zj = "zellij";
   };
   extra = ''
+    export EDITOR="nix run ~/nixvim# --"
     export PATH="$HOME/.cargo/bin:$PATH"
     export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
     eval "$(starship init zsh)"
