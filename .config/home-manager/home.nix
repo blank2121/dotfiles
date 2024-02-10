@@ -3,34 +3,16 @@
 {
   imports = [
     ./sh.nix
+    ./services.nix
     ./general-pkgs.nix
     ./linux-specific.nix
-    ./wm/wayland/wayland.nix
-    ./apps/default.nix
+    ./wm/wayland/hyprland.nix
   ];
   home = {
     username = "winston";
     homeDirectory = "/home/winston";
 
     stateVersion = "23.11";
-
-    packages = with pkgs; [
-      bacon
-      bat
-      bottom
-      fzf
-      gh
-      gitui
-      lf
-      pass
-      pyenv
-      ripgrep
-      starship
-      thefuck
-      zellij
-      zoxide
-      eza
-    ];
 
     sessionVariables = {
       EDITOR = "nix run ~/nixvim# --";

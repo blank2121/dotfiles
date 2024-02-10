@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+	imports = [
+		./apps/ui.nix
+		./services.nix
+	];
   home.packages = with pkgs; [
     #neovim
     brightnessctl
@@ -10,11 +14,12 @@
     firefox
     flatpak
     gnumake
+    hplip
     kitty
     mpv
     openssl_3
-    timeshift
     protonvpn-gui
+    timeshift
   ];
 
   # apps
@@ -32,13 +37,4 @@
       background_opacity 0.85
     '';
   };
-
-
-  # non-display server depended services
-
-  services.dunst = {
-    enable = true;
-    configFile = "~/dotfiles/.config/dunst/dunstrc";
-  };
-
 }

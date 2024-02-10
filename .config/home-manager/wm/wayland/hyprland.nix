@@ -2,12 +2,27 @@
 
 {
   imports = [
-    ./wayland.nix
+    ./apps/default.nix
   ];
-  # please dont use this on nixos.
-  # that is for the configuration.nix file and it does it better.
+
+  home.packages = with pkgs; [
+    rofi-wayland
+    swww
+    waybar
+    wineWowPackages.waylandFull
+    wl-clipboard
+    wlogout
+  ];
+
+
+  home.sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+      ELECTRON_OZONE_PLATFORM_HINT = "auto";
+    };
+
   wayland.windowManager.hyprland.enable = true;
+  wayland.windowManager.hyprland.xwayland.enable = true;
 
   # outdated for config
-  #wayland.windowManager.hyprland.extraConfig = builtins.readFile ~/dotfiles/.config/hypr/hyprland.conf;
+  wayland.windowManager.hyprland.extraConfig = builtins.readFile ~/dotfiles/.config/hypr/hyprland.conf;
 }
