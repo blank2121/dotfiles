@@ -91,7 +91,7 @@
     xwayland.enable = true;
   };
 
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  #environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   programs.zsh.enable = true;

@@ -11,7 +11,7 @@ if [ -e "$prev_battery_file" ]; then
 	# Check if the script is called with the argument "testL"
 	if [ "$1" == "testL" ]; then
 		# Run Dunst notification for testing low battery
-		dunstify -u lowbat "Low Battery Test" "Test Notification Triggered"
+		dunstify -u c "Low Battery Test" "Test Notification Triggered"
 	elif [ "$1" == "testF" ]; then
 		# Run Dunst notification for testing full battery
 		dunstify -u fullbat "Battery Charged Test" "Test Notification Triggered"
@@ -28,7 +28,7 @@ if [ -e "$prev_battery_file" ]; then
 		# Check if the current battery level is below 20%
 		if [ "$current_battery_level" -lt 20 ] && [ "$prev_battery_level" -ge 20 ]; then
 			# Run Dunst notification for low battery
-			dunstify -u lowbat "Low Battery" "20% Battery Left"
+			dunstify -u c "Low Battery" "20% Battery Left"
 		fi
 	fi
 fi
