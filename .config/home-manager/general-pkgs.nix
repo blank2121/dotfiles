@@ -11,7 +11,6 @@
     bacon
     bat
     bottom
-    cron
     eza
     fd
     fzf
@@ -39,6 +38,7 @@
     ripgrep
     rustup
     starship
+    texliveFull
     thefuck
     trash-cli
     ueberzugpp

@@ -15,7 +15,10 @@
     stateVersion = "23.11";
 
     sessionVariables = {
-      EDITOR = "nix run ~/nixvim# --";
+      EDITOR = "nv";
+      NIXOS_OZONE_WL = "1";
+      OZONE_WL = "1";
+      ELECTRON_OZONE_PLATFORM_HINT = "auto";
     };
   };
 

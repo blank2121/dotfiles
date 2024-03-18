@@ -15,7 +15,7 @@ let
     zj = "zellij";
   };
   extra = ''
-    export EDITOR="nix run ~/nixvim# --"
+    export EDITOR="nv"
     export PATH="$HOME/.cargo/bin:$PATH"
     export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
     eval "$(starship init zsh)"
