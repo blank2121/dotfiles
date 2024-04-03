@@ -19,6 +19,9 @@
     mpv
     openssl_3
     protonvpn-gui
+    spotify
+    spotify-tray
+    thunderbird
     timeshift
   ];
 

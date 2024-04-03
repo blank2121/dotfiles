@@ -7,6 +7,7 @@
     ./general-pkgs.nix
     ./linux-specific.nix
     ./wm/wayland/hyprland.nix
+    ./python-pkgs.nix
   ];
   home = {
     username = "winston";

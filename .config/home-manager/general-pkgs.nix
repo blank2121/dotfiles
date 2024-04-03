@@ -29,6 +29,7 @@
     neofetch
     nmap
     nodejs_20
+    ntfy
     openjdk
     pango
     pass
