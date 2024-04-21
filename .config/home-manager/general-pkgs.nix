@@ -23,6 +23,7 @@
     gnupg
     gum
     haskellPackages.cabal-install
+    julia
     lf
     mark
     mprocs
