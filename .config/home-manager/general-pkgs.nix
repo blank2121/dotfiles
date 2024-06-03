@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
-
-{
+let
+  baseconfig = { allowUnfree = true; };
+  unstable = import <nixos-unstable> { config = baseconfig; };
+in {
 
 	imports = [
 		./apps/cli.nix
@@ -8,6 +10,7 @@
 
   home.packages = with pkgs; [
     #neovim
+    ani-cli
     bacon
     bat
     bottom
@@ -24,6 +27,7 @@
     gum
     haskellPackages.cabal-install
     julia
+    jq
     lf
     mark
     mprocs
@@ -48,7 +52,7 @@
     wget
     which
     winetricks
-    zellij
-    zoxide
+    #zellij
+    #zoxide
   ];
 }

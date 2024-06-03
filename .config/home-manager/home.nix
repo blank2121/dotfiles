@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
-{
+let
+  baseconfig = { allowUnfree = true; };
+  unstable = import <nixos-unstable> { config = baseconfig; };
+in {
+
   imports = [
     ./sh.nix
     ./services.nix
@@ -69,6 +73,7 @@
     };
 
     zellij = {
+      package = unstable.zellij;
       enable = true;
       enableZshIntegration = true;
     };

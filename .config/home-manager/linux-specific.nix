@@ -2,11 +2,12 @@
 
 {
 	imports = [
-		./apps/ui.nix
 		./services.nix
+		./stylix.nix
 	];
   home.packages = with pkgs; [
     #neovim
+    angryipscanner
     brightnessctl
     btrfs-progs
     cmus
@@ -14,13 +15,13 @@
     firefox
     flatpak
     gnumake
+    godot_4
+    obs-studio
     hplip
     kitty
     mpv
     openssl_3
-    protonvpn-gui
     spotify
-    spotify-tray
     thunderbird
     timeshift
   ];
@@ -39,5 +40,11 @@
     extraConfig = ''
       background_opacity 0.85
     '';
+  };
+
+  home.file."rofi" = {
+    enable = true;
+    source = ~/dotfiles/.config/rofi/config.rasi;
+    target = ".config/rofi/config.rasi";
   };
 }

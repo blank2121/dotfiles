@@ -17,7 +17,6 @@ let
   extra = ''
     export EDITOR="nv"
     export PATH="$HOME/.cargo/bin:$PATH"
-    export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
     export PATH="$HOME/.julia/packages/LanguageServer/Fwm1f/src/LanguageServer.jl:$PATH"
     eval "$(starship init zsh)"
     eval "$(zoxide init zsh)"

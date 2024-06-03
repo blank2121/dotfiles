@@ -14,6 +14,11 @@
     wlogout
   ];
 
+  programs.eww = {
+    enable = true;
+    package = pkgs.eww-wayland;
+    configDir = ~/dotfiles/.config/eww;
+  };
 
   home.sessionVariables = {
       NIXOS_OZONE_WL = "1";
