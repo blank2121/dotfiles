@@ -6,18 +6,19 @@ let
 in {
 
   imports = [
-    ./sh.nix
-    ./services.nix
+    ./games.nix
     ./general-pkgs.nix
     ./linux-specific.nix
-    ./wm/wayland/hyprland.nix
     ./python-pkgs.nix
+    ./services.nix
+    ./sh.nix
+    ./wm/wayland/hyprland.nix
   ];
   home = {
     username = "winston";
     homeDirectory = "/home/winston";
 
-    stateVersion = "23.11";
+    stateVersion = "24.04";
 
     sessionVariables = {
       EDITOR = "nv";
