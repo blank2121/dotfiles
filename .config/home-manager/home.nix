@@ -18,7 +18,7 @@ in {
     username = "winston";
     homeDirectory = "/home/winston";
 
-    stateVersion = "24.04";
+    stateVersion = "23.11";
 
     sessionVariables = {
       EDITOR = "nv";

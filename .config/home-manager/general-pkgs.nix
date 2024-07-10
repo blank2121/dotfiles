@@ -4,9 +4,9 @@ let
   unstable = import <nixos-unstable> { config = baseconfig; };
 in {
 
-	imports = [
-		./apps/cli.nix
-	];
+  imports = [
+    ./apps/cli.nix
+  ];
 
   home.packages = with pkgs; [
     #neovim
@@ -26,6 +26,7 @@ in {
     gnupg
     gum
     haskellPackages.cabal-install
+    haskellPackages.haskell-language-server
     julia
     jq
     lf

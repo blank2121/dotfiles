@@ -5,24 +5,22 @@
 		./services.nix
 	];
   home.packages = with pkgs; [
-    #neovim
     angryipscanner
     brightnessctl
     btrfs-progs
-    cmus
     dunst
     firefox
     flatpak
     gnumake
     godot_4
-    obs-studio
     hplip
-    kitty
     mpv
+    obs-studio
     openssl_3
     spotify
     thunderbird
     timeshift
+    tor
   ];
 
   # apps
