@@ -22,7 +22,6 @@ let
     export NIXPKGS_ALLOW_UNFREE=1
     eval "$(starship init zsh)"
     eval "$(zoxide init zsh)"
-    eval $(thefuck --alias)
   '';
 in
 {

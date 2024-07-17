@@ -7,8 +7,7 @@ in {
 
   imports = [
     ./games.nix
-    ./general-pkgs.nix
-    ./linux-specific.nix
+    ./clis-apps.nix
     ./python-pkgs.nix
     ./services.nix
     ./sh.nix
