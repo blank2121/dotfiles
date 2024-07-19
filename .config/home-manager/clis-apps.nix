@@ -1,27 +1,19 @@
 { config, pkgs, ... }:
-
-{
+let
+  baseconfig = { allowUnfree = true; };
+  unstable = import <nixos-unstable> { config = baseconfig; };
+in {
   home.packages = with pkgs; [
     angryipscanner
-    ansel
-    brightnessctl
-    btrfs-progs
-    firefox
-    flatpak
-    gnumake
-    godot_4
-    hplip
-    mpv
-    openssl_3
-    spotify
-    thunderbird
-    timeshift
-    tor-browser
     bacon
     bat
     bottom
+    brightnessctl
+    btrfs-progs
     eza
     fd
+    firefox
+    flatpak
     fzf
     gcc
     gh
@@ -29,36 +21,46 @@
     git
     gitui
     glow
+    gnumake
     gnupg
+    godot_4
     gum
     haskellPackages.cabal-install
     haskellPackages.haskell-language-server
-    julia
+    hplip
     jq
+    julia
     lf
     mark
     mprocs
+    mpv
     neofetch
     nmap
     nodejs_20
     ntfy
     openjdk
+    openssl_3
     pango
     pass
     poetry
     pyenv
     python312Full
+    remnote
     ripgrep
     rustup
+    spotify
     starship
     texliveFull
+    thunderbird
+    timeshift
+    tor-browser
     trash-cli
     ueberzugpp
     vim
     wget
     which
     winetricks
-  ];
+  ] ++ [unstable.ansel];
 
   # apps
   programs.kitty = {
