@@ -6,6 +6,7 @@ let
 in {
 
   imports = [
+    ./style.nix
     ./games.nix
     ./clis-apps.nix
     ./python-pkgs.nix

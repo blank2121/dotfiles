@@ -40,6 +40,7 @@ in {
     ntfy
     openjdk
     openssl_3
+    pandoc
     pango
     pass
     poetry
