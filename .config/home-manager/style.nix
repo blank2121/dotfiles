@@ -13,7 +13,7 @@ in {
     stylix = {
       enable = true;
       image = ~/Photos/wallpaper/Graphite-Mono/mountain_snow.jpg;
-      polarity = "dark";
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
+      #polarity = "dark";
+      #base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
     };
 }
